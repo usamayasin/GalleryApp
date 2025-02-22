@@ -72,6 +72,9 @@ dependencies {
     implementation(libs.hilt.android.v244)
     kapt(libs.hilt.android.compiler.v244)
 
+    //Glide
+    implementation(libs.glide)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

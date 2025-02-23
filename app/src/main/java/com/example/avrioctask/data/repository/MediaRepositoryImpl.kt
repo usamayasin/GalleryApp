@@ -19,7 +19,7 @@ class MediaRepositoryImpl(
     private val contentResolver: ContentResolver
 ) : MediaRepository {
 
-    private var albumCache = listOf<Album>()
+    var albumCache = listOf<Album>()
     override suspend fun getAllAlbums(): Flow<DataState<List<Album>>> = flow {
         try {
             val cachedAlbums = albumCache.toList()
@@ -54,7 +54,7 @@ class MediaRepositoryImpl(
         }
     }
 
-    private suspend fun getData(): Flow<List<Album>> = flow {
+    private fun getData(): Flow<List<Album>> = flow {
         emit(withContext(Dispatchers.IO) {
             val projection = arrayOf(
                 MediaStore.Files.FileColumns._ID,

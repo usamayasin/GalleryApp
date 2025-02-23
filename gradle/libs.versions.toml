@@ -20,9 +20,11 @@ navigationFragmentKtxVersion = "2.7.7"
 navigationUiKtx = "1.2.1"
 lifecycleExtensionsVersion = "2.2.0"
 lifecycleExtensions = "1.1.1"
+core = "1.5.0"
 
 
 [libraries]
+androidx-core = { module = "androidx.test:core", version.ref = "core" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -45,6 +47,7 @@ hilt-android-v244 = { module = "com.google.dagger:hilt-android", version.ref = "
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+androidx-rules = { module = "androidx.test:rules", version.ref = "core" }
 
 
 [plugins]
